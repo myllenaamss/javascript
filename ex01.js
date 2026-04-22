@@ -1,22 +1,14 @@
-const readline = require('readline').createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+// Importando o módulo que você instalou via terminal
+const prompt = require('prompt-sync')();
 
-// 1. Entrada de Dados
-readline.question('Digite a temperatura em graus Celsius: ', (entrada) => {
-  let celsius = parseFloat(entrada);
+console.log("--- Soma de Valores ---");
 
-  // Validação simples
-  if (isNaN(celsius)) {
-    console.log("Por favor, insira um número válido.");
-  } else {
-    // 2. Processamento
-    let fahrenheit = (celsius * 9 / 5) + 32;
+// Importante: prompt sempre lê TEXTO. 
+// Usamos Number() para converter, igual ao (int) ou (float) no C.
+let num1 = Number(prompt("Digite o primeiro número: "));
+let num2 = Number(prompt("Digite o segundo número: "));
 
-    // 3. Saída de Dados
-    console.log(`A temperatura convertida é: ${fahrenheit.toFixed(1)}°F`);
-  }
+let soma = num1 + num2;
 
-  readline.close();
-});
+// Template String (usa crases): facilita exibir variáveis no meio do texto
+console.log(`O resultado da soma entre ${num1} e ${num2} é: ${soma}`);
