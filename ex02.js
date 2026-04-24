@@ -14,7 +14,7 @@ rl.question("Digite a temperatura em Fahrenheit (°F): ", (answer) => {
   let celsius = (fahrenheit - 32) * 5 / 9;
 
   // 3. Saída de Dados
-  console.log(`Temperatura em Celsius: ${celsius.toFixed(1)}°C`);
+  console.log(`Temperatura em Celsius: ${celsius}°C`);
 
   // Fecha a interface
   rl.close();

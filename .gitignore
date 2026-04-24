@@ -1,1 +1,25 @@
-node_modules/
+// 1. Entrada de Dados
+// No Node.js, usamos o módulo readline para capturar o que o usuário digita
+const readline = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+readline.question('Digite a temperatura em graus Celsius: ', (entrada) => {
+  const celsius = parseFloat(entrada);
+
+  // Validação simples para garantir que a entrada é um número
+  if (isNaN(celsius)) {
+    console.log("Por favor, insira um valor numérico válido.");
+  } else {
+    
+    // 2. Processamento
+    // Aplicando a fórmula: F = C * 9/5 + 32
+    const fahrenheit = (celsius * 9/5) + 32;
+
+    // 3. Saída de Dados
+    console.log(`A temperatura convertida é: ${fahrenheit.toFixed(1)}°F`);
+  }
+
+  readline.close();
+});
