@@ -1,4 +1,4 @@
-const prompt = require('prompt-sync')();
+const prompt = require (`prompt-sync`)();
 
 console.log("--- Cálculo do Quadrado da Divisão de Dois Números Inteiros: ");
 
