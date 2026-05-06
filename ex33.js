@@ -27,7 +27,7 @@ for (let i = 0; i < numeros.length; i++) {
 numeros.forEach((num, index) => {
     // Verificação: Se o resto da divisão por 2 é 0 E por 3 é 0
     if (num % 2 === 0 && num % 3 === 0) {
-        console.log(`Valor ${index + 1} (${num}): É divisível por 2 e 3.`);
+        console.log(`Valor ${index + 1} {${num}): É divisível por 2 e 3.`);
     } else {
         console.log(`Valor ${index + 1} (${num}): Não atende aos critérios.`);
     }
